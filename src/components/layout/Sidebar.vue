@@ -22,7 +22,7 @@
             />
           </svg> -->
 
-          <span class="text-white text-2xl mx-2 font-semibold hover:scale-110 transform motion-reduce:transform-none">Template-Tailwind</span>
+          <span class="text-white text-2xl mx-2 font-semibold transform hover:scale-110 cursor-pointer">Template-Tailwind</span>
         </div>
       </div>
 
