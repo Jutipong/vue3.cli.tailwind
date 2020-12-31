@@ -2,12 +2,7 @@
   <div class="flex justify-center items-center h-screen bg-gray-200 px-6">
     <div class="p-6 max-w-sm w-full bg-white shadow-md rounded-md">
       <div class="flex justify-center items-center">
-        <svg
-          class="h-10 w-10"
-          viewBox="0 0 512 512"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="h-10 w-10" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M364.61 390.213C304.625 450.196 207.37 450.196 147.386 390.213C117.394 360.22 102.398 320.911 102.398 281.6C102.398 242.291 117.394 202.981 147.386 172.989C147.386 230.4 153.6 281.6 230.4 307.2C230.4 256 256 102.4 294.4 76.7999C320 128 334.618 142.997 364.608 172.989C394.601 202.981 409.597 242.291 409.597 281.6C409.597 320.911 394.601 360.22 364.61 390.213Z"
             fill="#4C51BF"
@@ -27,20 +22,12 @@
       <form class="mt-4" @submit.prevent="login">
         <label class="block">
           <span class="text-gray-700 text-sm">Email</span>
-          <input
-            type="email"
-            class="form-input mt-1 block w-full rounded-md focus:border-indigo-600"
-            v-model="email"
-          />
+          <input type="email" class="form-input mt-1 block w-full rounded-md focus:border-indigo-600" v-model="email" />
         </label>
 
         <label class="block mt-3">
           <span class="text-gray-700 text-sm">Password</span>
-          <input
-            type="password"
-            class="form-input mt-1 block w-full rounded-md focus:border-indigo-600"
-            v-model="password"
-          />
+          <input type="password" class="form-input mt-1 block w-full rounded-md focus:border-indigo-600" v-model="password" />
         </label>
 
         <div class="flex justify-between items-center mt-4">
@@ -52,21 +39,12 @@
           </div>
 
           <div>
-            <a
-              class="block text-sm fontme text-indigo-700 hover:underline"
-              href="#"
-              >Forgot your password?</a
-            >
+            <a class="block text-sm fontme text-indigo-700 hover:underline" href="#">Forgot your password?</a>
           </div>
         </div>
 
         <div class="mt-6">
-          <button
-            type="submit"
-            class="py-2 px-4 text-center bg-indigo-600 rounded-md w-full text-white text-sm hover:bg-indigo-500"
-          >
-            Sign in
-          </button>
+          <button type="submit" class="py-2 px-4 text-center bg-indigo-600 rounded-md w-full text-white text-sm hover:bg-indigo-500">Sign in</button>
         </div>
       </form>
     </div>
@@ -74,17 +52,17 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
-import { useRouter } from "vue-router";
+import { defineComponent, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   setup() {
     const router = useRouter();
-    const email = ref("johndoe@mail.com");
-    const password = ref("@#!@#asdf1231!_!@#");
+    const email = ref('abcdefg@mail.com');
+    const password = ref('@#!@#asdf1231!_!@#');
 
     function login() {
-      router.push("/dashboard");
+      router.push('/dashboard');
     }
 
     return {
