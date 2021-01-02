@@ -332,7 +332,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import { useTableData } from "../store/useTableData";
+import { useTableData } from "../hooks/useTableData";
 
 export default defineComponent({
   setup() {
