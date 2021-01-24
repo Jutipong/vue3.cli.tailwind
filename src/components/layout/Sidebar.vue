@@ -27,12 +27,19 @@
       </div>
 
       <nav class="mt-10">
+        <router-link class="flex items-center duration-200 mt-4 py-2 px-6 border-l-4" :class="[$route.name === 'Users' ? activeClass : inactiveClass]" to="/users">
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none">
+            <path d="M2 10C2 5.58172 5.58172 2 10 2V10H18C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="currentColor" />
+            <path d="M12 2.25195C14.8113 2.97552 17.0245 5.18877 17.748 8.00004H12V2.25195Z" fill="currentColor" />
+          </svg>
+          <span class="mx-4">Users</span>
+        </router-link>
+        <!-- 
         <router-link class="flex items-center duration-200 mt-4 py-2 px-6 border-l-4" :class="[$route.name === 'Dashboard' ? activeClass : inactiveClass]" to="/dashboard">
           <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none">
             <path d="M2 10C2 5.58172 5.58172 2 10 2V10H18C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="currentColor" />
             <path d="M12 2.25195C14.8113 2.97552 17.0245 5.18877 17.748 8.00004H12V2.25195Z" fill="currentColor" />
           </svg>
-
           <span class="mx-4">Dashboard</span>
         </router-link>
 
@@ -89,27 +96,27 @@
           </svg>
 
           <span class="mx-4">Blank</span>
-        </router-link>
+        </router-link> -->
       </nav>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import { useSidebar } from '../../store/useSidebar';
+import { defineComponent, ref } from 'vue'
+import { useSidebar } from '../../hooks/useSidebar'
 
 export default defineComponent({
   setup() {
-    const { isOpen } = useSidebar();
-    const activeClass = ref('bg-gray-600 bg-opacity-25 text-gray-100 border-gray-100');
-    const inactiveClass = ref('border-gray-900 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100');
+    const { isOpen } = useSidebar()
+    const activeClass = ref('bg-gray-600 bg-opacity-25 text-gray-100 border-gray-100')
+    const inactiveClass = ref('border-gray-900 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100')
 
     return {
       isOpen,
       activeClass,
-      inactiveClass,
-    };
-  },
-});
+      inactiveClass
+    }
+  }
+})
 </script>

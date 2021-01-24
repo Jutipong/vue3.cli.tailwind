@@ -6,6 +6,7 @@
     "build": "cross-env NODE_ENV=production vite build"
   },
   "dependencies": {
+    "firebase": "^8.2.1",
     "tailwindcss": "^1.9.6",
     "vue": "^3.0.5",
     "vue-router": "^4.0.0-beta.13"
